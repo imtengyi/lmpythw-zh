@@ -1,0 +1,1173 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>练习 34：分析器 · 笨办法学 Python · 续</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="caimaoy">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ex35.html" />
+    
+    
+    <link rel="prev" href="ex33.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    笨办法学 Python · 续 中文版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="part1.html">
+            
+                <a href="part1.html">
+            
+                    
+                    第一部分：预备知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ex0.html">
+            
+                <a href="ex0.html">
+            
+                    
+                    练习 0：起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ex1.html">
+            
+                <a href="ex1.html">
+            
+                    
+                    练习 1：流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ex2.html">
+            
+                <a href="ex2.html">
+            
+                    
+                    练习 2：创造力
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ex3.html">
+            
+                <a href="ex3.html">
+            
+                    
+                    练习 3：质量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="part2.html">
+            
+                <a href="part2.html">
+            
+                    
+                    第二部分：简单的黑魔法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ex4.html">
+            
+                <a href="ex4.html">
+            
+                    
+                    练习 4：处理命令行参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ex5.html">
+            
+                <a href="ex5.html">
+            
+                    
+                    练习 5：cat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ex6.html">
+            
+                <a href="ex6.html">
+            
+                    
+                    练习 6：find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ex7.html">
+            
+                <a href="ex7.html">
+            
+                    
+                    练习 7：grep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ex8.html">
+            
+                <a href="ex8.html">
+            
+                    
+                    练习 8：cut
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="ex9.html">
+            
+                <a href="ex9.html">
+            
+                    
+                    练习 9：sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="ex10.html">
+            
+                <a href="ex10.html">
+            
+                    
+                    练习 10：sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="ex11.html">
+            
+                <a href="ex11.html">
+            
+                    
+                    练习 11：uniq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="ex12.html">
+            
+                <a href="ex12.html">
+            
+                    
+                    练习 12：复习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="part3.html">
+            
+                <a href="part3.html">
+            
+                    
+                    第三部分：数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="ex13.html">
+            
+                <a href="ex13.html">
+            
+                    
+                    练习 13：单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="ex14.html">
+            
+                <a href="ex14.html">
+            
+                    
+                    练习 14：双链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="ex15.html">
+            
+                <a href="ex15.html">
+            
+                    
+                    练习 15：栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="ex16.html">
+            
+                <a href="ex16.html">
+            
+                    
+                    练习 16：冒泡、快速和归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="ex17.html">
+            
+                <a href="ex17.html">
+            
+                    
+                    练习 17：字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="ex18.html">
+            
+                <a href="ex18.html">
+            
+                    
+                    练习 18：性能测量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="ex19.html">
+            
+                <a href="ex19.html">
+            
+                    
+                    练习 19：改善性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="ex20.html">
+            
+                <a href="ex20.html">
+            
+                    
+                    练习 20：二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="ex21.html">
+            
+                <a href="ex21.html">
+            
+                    
+                    练习 21：二分搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="ex22.html">
+            
+                <a href="ex22.html">
+            
+                    
+                    练习 22：后缀数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="ex23.html">
+            
+                <a href="ex23.html">
+            
+                    
+                    练习 23：三叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="ex24.html">
+            
+                <a href="ex24.html">
+            
+                    
+                    练习 24：URL 快速路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="part4.html">
+            
+                <a href="part4.html">
+            
+                    
+                    第四部分：进阶项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="ex25.html">
+            
+                <a href="ex25.html">
+            
+                    
+                    练习 25：xargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="ex26.html">
+            
+                <a href="ex26.html">
+            
+                    
+                    练习 26：hexdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="ex27.html">
+            
+                <a href="ex27.html">
+            
+                    
+                    练习 27：tr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="ex28.html">
+            
+                <a href="ex28.html">
+            
+                    
+                    练习 28：sh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="ex29.html">
+            
+                <a href="ex29.html">
+            
+                    
+                    练习 29：diff和patch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="part5.html">
+            
+                <a href="part5.html">
+            
+                    
+                    第五部分：文本解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="ex30.html">
+            
+                <a href="ex30.html">
+            
+                    
+                    练习 30：有限状态机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="ex31.html">
+            
+                <a href="ex31.html">
+            
+                    
+                    练习 31：正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="ex32.html">
+            
+                <a href="ex32.html">
+            
+                    
+                    练习 32：扫描器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="ex33.html">
+            
+                <a href="ex33.html">
+            
+                    
+                    练习 33：解析器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.42" data-path="ex34.html">
+            
+                <a href="ex34.html">
+            
+                    
+                    练习 34：分析器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="ex35.html">
+            
+                <a href="ex35.html">
+            
+                    
+                    练习 35：解释器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="ex36.html">
+            
+                <a href="ex36.html">
+            
+                    
+                    练习 36：简单的计算器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="ex37.html">
+            
+                <a href="ex37.html">
+            
+                    
+                    练习 37：小型 BASIC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="part6.html">
+            
+                <a href="part6.html">
+            
+                    
+                    第六部分：SQL 和对象关系映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="ex38.html">
+            
+                <a href="ex38.html">
+            
+                    
+                    练习 38：SQL 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="ex39.html">
+            
+                <a href="ex39.html">
+            
+                    
+                    练习 39：SQL 创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="ex40.html">
+            
+                <a href="ex40.html">
+            
+                    
+                    练习 40：SQL 读取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="ex41.html">
+            
+                <a href="ex41.html">
+            
+                    
+                    练习 41：SQL 更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="ex42.html">
+            
+                <a href="ex42.html">
+            
+                    
+                    练习 42：SQL 删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="ex43.html">
+            
+                <a href="ex43.html">
+            
+                    
+                    练习 43：SQL 管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="ex44.html">
+            
+                <a href="ex44.html">
+            
+                    
+                    练习 44：使用 Python 的数据库 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="ex45.html">
+            
+                <a href="ex45.html">
+            
+                    
+                    练习 45：创建 ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="part7.html">
+            
+                <a href="part7.html">
+            
+                    
+                    第七部分：大作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="ex46.html">
+            
+                <a href="ex46.html">
+            
+                    
+                    练习 46：blog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="ex47.html">
+            
+                <a href="ex47.html">
+            
+                    
+                    练习 47：bc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="ex48.html">
+            
+                <a href="ex48.html">
+            
+                    
+                    练习 48：ed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="ex49.html">
+            
+                <a href="ex49.html">
+            
+                    
+                    练习 49：sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="ex50.html">
+            
+                <a href="ex50.html">
+            
+                    
+                    练习 50：vi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="ex51.html">
+            
+                <a href="ex51.html">
+            
+                    
+                    练习 51：lessweb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="ex52.html">
+            
+                <a href="ex52.html">
+            
+                    
+                    练习 52：moreweb
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >练习 34：分析器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7EC3;&#x4E60;-34&#xFF1A;&#x5206;&#x6790;&#x5668;">&#x7EC3;&#x4E60; 34&#xFF1A;&#x5206;&#x6790;&#x5668;</h1>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://learncodethehardway.org/more-python-book/ex34.html" target="_blank">Exercise 34: Analyzers</a></p>
+<p>&#x8BD1;&#x8005;&#xFF1A;<a href="https://github.com/wizardforcel" target="_blank">&#x98DE;&#x9F99;</a></p>
+<p>&#x534F;&#x8BAE;&#xFF1A;<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></p>
+<p>&#x81EA;&#x8C6A;&#x5730;&#x91C7;&#x7528;<a href="https://translate.google.cn/" target="_blank">&#x8C37;&#x6B4C;&#x7FFB;&#x8BD1;</a></p>
+</blockquote>
+<p>&#x4F60;&#x73B0;&#x5728;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x89E3;&#x6790;&#x5668;&#xFF0C;&#x5B83;&#x5E94;&#x8BE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x5BF9;&#x8C61;&#x6811;&#x3002;&#x6211;&#x4F1A;&#x5C06;&#x5176;&#x79F0;&#x4E3A;&#x201C;&#x89E3;&#x6790;&#x6811;&#x201D;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x201C;&#x89E3;&#x6790;&#x6811;&#x7684;&#x9876;&#x90E8;&#x5F00;&#x59CB;&#xFF0C;&#x7136;&#x540E;&#x201C;&#x904D;&#x5386;&#x201D;&#x5B83;&#xFF0C;&#x76F4;&#x5230;&#x4F60;&#x8BBF;&#x95EE;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x6765;&#x5206;&#x6790;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x3002;&#x5F53;&#x4F60;&#x4E86;&#x89E3;<code>BSTree</code>&#x548C;<code>TSTree</code>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x65F6;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x505A;&#x4E86;&#x8FD9;&#x6837;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x4F60;&#x4ECE;&#x9876;&#x90E8;&#x5F00;&#x59CB;&#x8BBF;&#x95EE;&#x4E86;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;&#x4F60;&#x8BBF;&#x95EE;&#x7684;&#x987A;&#x5E8F;&#xFF08;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#xFF0C;&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#xFF0C;&#x987A;&#x5E8F;&#x904D;&#x5386;&#x7B49;&#xFF09;&#x786E;&#x5B9A;&#x4E86;&#x8282;&#x70B9;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;&#x4F60;&#x7684;&#x89E3;&#x6790;&#x6811;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x7F16;&#x5199;&#x5FAE;&#x578B; Python &#x89E3;&#x91CA;&#x5668;&#x7684;&#x4E0B;&#x4E00;&#x6B65;&#x662F;&#x904D;&#x5386;&#x6811;&#x5E76;&#x5206;&#x6790;&#x5B83;&#x3002;</p>
+<p>&#x5206;&#x6790;&#x5668;&#x7684;&#x4EFB;&#x52A1;&#x662F;&#xFF0C;&#x5728;&#x4F60;&#x7684;&#x8BED;&#x6CD5;&#x4E2D;&#x627E;&#x5230;&#x8BED;&#x4E49;&#x9519;&#x8BEF;&#xFF0C;&#x5E76;&#x4FEE;&#x590D;&#x6216;&#x6DFB;&#x52A0;&#x4E0B;&#x4E00;&#x9636;&#x6BB5;&#x9700;&#x8981;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x8BED;&#x4E49;&#x9519;&#x8BEF;&#x662F;&#x9519;&#x8BEF;&#xFF0C;&#x867D;&#x7136;&#x8BED;&#x6CD5;&#x6B63;&#x786E;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x9002;&#x5408; Python &#x7A0B;&#x5E8F;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5C1A;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x904D;&#x5386;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E0D;&#x7B26;&#x5408;&#x903B;&#x8F91;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5B83;&#x6839;&#x672C;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x3002;&#x4E00;&#x4E9B;&#x8BED;&#x8A00;&#x8BED;&#x6CD5;&#x662F;&#x5982;&#x6B64;&#x677E;&#x6563;&#xFF0C;&#x5206;&#x6790;&#x5668;&#x5FC5;&#x987B;&#x505A;&#x66F4;&#x591A;&#x7684;&#x5DE5;&#x4F5C;&#x6765;&#x4FEE;&#x590D;&#x89E3;&#x6790;&#x6811;&#x3002;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x5F88;&#x5BB9;&#x6613;&#x89E3;&#x6790;&#x548C;&#x5904;&#x7406;&#xFF0C;&#x751A;&#x81F3;&#x4E0D;&#x9700;&#x8981;&#x5206;&#x6790;&#x5668;&#x7684;&#x6B65;&#x9AA4;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x7F16;&#x5199;&#x5206;&#x6790;&#x5668;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x8BBF;&#x95EE;&#x89E3;&#x6790;&#x6811;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5206;&#x6790;&#x9519;&#x8BEF;&#xFF0C;&#x5E76;&#x4FEE;&#x590D;&#x4EFB;&#x4F55;&#x7F3A;&#x5C11;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x6709;&#x4E09;&#x79CD;&#x901A;&#x7528;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x5B83;&#xFF1A;</p>
+<ul>
+<li>&#x4F60;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5206;&#x6790;&#x5668;&#xFF0C;&#x5B83;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x66F4;&#x65B0;&#x6BCF;&#x4E2A;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x3002;&#x5B83;&#x5C06;&#x4EE5;&#x548C;&#x89E3;&#x6790;&#x5668;&#x76F8;&#x4F3C;&#x7684;&#x65B9;&#x5F0F;&#x904D;&#x5386;&#x89E3;&#x6790;&#x6811;&#xFF0C;&#x5BF9;&#x6BCF;&#x79CD;&#x751F;&#x4EA7;&#x5F0F;&#x7C7B;&#x578B;&#x90FD;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x4ED6;&#x7684;&#x4EFB;&#x52A1;&#x662F;&#x66F4;&#x6539;&#xFF0C;&#x66F4;&#x65B0;&#x548C;&#x68C0;&#x67E5;&#x4EA7;&#x751F;&#x5F0F;&#x3002;</li>
+<li>&#x4F60;&#x6539;&#x53D8;&#x4F60;&#x7684;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#xFF0C;&#x8BA9;&#x4ED6;&#x4EEC;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x5206;&#x6790;&#x81EA;&#x5DF1;&#x7684;&#x72B6;&#x6001;&#x3002;&#x90A3;&#x4E48;&#x4F60;&#x7684;&#x5206;&#x6790;&#x5668;&#x5C31;&#x4EC5;&#x4EC5;&#x662F;&#x4E00;&#x4E2A;&#x5F15;&#x64CE;&#xFF0C;&#x5B83;&#x904D;&#x5386;&#x89E3;&#x6790;&#x6811;&#xFF0C;&#x8C03;&#x7528;&#x6BCF;&#x4E2A;&#x4EA7;&#x751F;&#x5F0F;&#x7684;<code>analyze()</code>&#x65B9;&#x6CD5;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x98CE;&#x683C;&#xFF0C;&#x4F60;&#x5C06;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x72B6;&#x6001;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x4F20;&#x9012;&#x7ED9;&#x6BCF;&#x4E2A;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x5E94;&#x8BE5;&#x662F;&#x7B2C;&#x4E09;&#x4E2A;&#x7C7B;&#x3002;</li>
+<li>&#x4F60;&#x521B;&#x5EFA;&#x4E00;&#x7EC4;&#x5355;&#x72EC;&#x7684;&#x7C7B;&#x6765;&#x5B9E;&#x73B0;&#x6700;&#x7EC8;&#x5206;&#x6790;&#x540E;&#x7684;&#x6811;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x4F20;&#x9012;&#x7ED9;&#x89E3;&#x91CA;&#x5668;&#x3002;&#x901A;&#x8FC7;&#x8BB8;&#x591A;&#x65B9;&#x5F0F;&#xFF0C;&#x4F60;&#x5C06;&#x4F7F;&#x7528;&#x4E00;&#x7EC4;&#x65B0;&#x7684;&#x7C7B;&#x6765;&#x6620;&#x5C04;&#x8BED;&#x6CD5;&#x5206;&#x6790;&#x5668;&#x7684;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E9B;&#x65B0;&#x7684;&#x7C7B;&#x63A5;&#x53D7;&#x5168;&#x5C40;&#x72B6;&#x6001;&#xFF0C;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#xFF0C;&#x5E76;&#x914D;&#x7F6E;&#x5176;<code>__init__</code>&#xFF0C;&#x4F7F;&#x5176;&#x4E3A;&#x5206;&#x6790;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<p>&#x6211;&#x5EFA;&#x8BAE;&#x4F60;&#x73B0;&#x5728;&#x4F7F;&#x7528; #2 &#x6216; #3 &#x6765;&#x5B8C;&#x6210;&#x6311;&#x6218;&#x7EC3;&#x4E60;&#x3002;</p>
+<h2 id="&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;">&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;</h2>
+<p>&#x201C;&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;&#x201D;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BED;&#x8A00;&#x4E2D;&#x975E;&#x5E38;&#x5E38;&#x89C1;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x5176;&#x4E2D;&#x4F60;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E9B;&#x7C7B;&#xFF0C;&#x5B83;&#x4EEC;&#x77E5;&#x9053;&#x88AB;&#x201C;&#x8BBF;&#x95EE;&#x201D;&#x65F6;&#x5E94;&#x8BE5;&#x505A;&#x4EC0;&#x4E48;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5C06;&#x5904;&#x7406;&#x67D0;&#x4E2A;&#x7C7B;&#x7684;&#x4EE3;&#x7801;&#x96C6;&#x6210;&#x5230;&#x8FD9;&#x4E2A;&#x7C7B;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x4F18;&#x70B9;&#x662F;&#xFF0C;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x5927;&#x578B;&#x7684;<code>if</code>&#x8BED;&#x53E5;&#x6765;&#x68C0;&#x67E5;&#x7C7B;&#x4E0A;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6765;&#x4E86;&#x89E3;&#x8BE5;&#x505A;&#x4EC0;&#x4E48;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E8E;&#x8FD9;&#x4E2A;&#x7684;&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">visit</span><span class="hljs-params">(self, data)</span>:</span>
+        <span class="hljs-comment"># do stuff to self for foo</span>
+</code></pre>
+<p>&#x4E00;&#x65E6;&#x4F60;&#x62E5;&#x6709;&#x4E86;&#x8FD9;&#x4E2A;&#x7C7B;&#xFF08;<code>visit</code>&#x53EF;&#x4EE5;&#x53EB;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#xFF09;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x5217;&#x8868;&#x6765;&#x8C03;&#x7528;&#x5B83;&#x3002;</p>
+<pre><code class="lang-py"><span class="hljs-keyword">for</span> action <span class="hljs-keyword">in</span> list_of_actions:
+    action.visit(data)
+</code></pre>
+<p>&#x4F60;&#x5C06;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x7528;&#x4E8E; #2 &#x6216; #3 &#x98CE;&#x683C;&#x7684;&#x5206;&#x6790;&#x5668;&#xFF1B;&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x4F60;&#x51B3;&#x5B9A;&#xFF0C;&#x4F60;&#x7684;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x4E5F;&#x5C06;&#x662F;&#x5206;&#x6790;&#x7ED3;&#x679C;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x7684;<code>analyze()</code>&#x51FD;&#x6570;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;<code>visit()</code>&#xFF09;&#x53EA;&#x4F1A;&#x5C06;&#x8BE5;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x4EA7;&#x751F;&#x5F0F;&#x7C7B;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x63D0;&#x4F9B;&#x7ED9;&#x5B83;&#x7684;&#x72B6;&#x6001;&#x4E2D;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x51B3;&#x5B9A;&#xFF0C;&#x4F60;&#x7684;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x5C06;&#x4E3A;&#x89E3;&#x91CA;&#x5668;&#x751F;&#x6210;&#x53E6;&#x4E00;&#x7EC4;&#x7C7B;&#xFF08;&#x8BF7;&#x53C2;&#x9605;&#x7EC3;&#x4E60; 35&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x6B21;<code>analyze</code>&#x7684;&#x8C03;&#x7528;&#x90FD;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x5C06;&#x653E;&#x5165;&#x5217;&#x8868;&#x4E2D;&#x4EE5;&#x4F9B;&#x4EE5;&#x540E;&#x4F7F;&#x7528;&#xFF0C;&#x6216;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x5B50;&#x6811;&#x9644;&#x52A0;&#x5230;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<p>&#x6211;&#x5C06;&#x4ECB;&#x7ECD;&#x7B2C;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5176;&#x4E2D;&#x4F60;&#x7684;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x4E5F;&#x662F;&#x4F60;&#x7684;&#x5206;&#x6790;&#x5668;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x9002;&#x7528;&#x4E8E;&#x6211;&#x4EEC;&#x7B80;&#x5355;&#x7684;&#x5FAE;&#x578B; Python &#x811A;&#x672C;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x9075;&#x5FAA;&#x8FD9;&#x79CD;&#x98CE;&#x683C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5C1D;&#x8BD5;&#x5176;&#x4ED6;&#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x4E4B;&#x540E;&#x5C1D;&#x8BD5;&#x3002;</p>
+<h2 id="&#x7B80;&#x77ED;&#x7684;&#x5FAE;&#x578B;-python-&#x5206;&#x6790;&#x5668;">&#x7B80;&#x77ED;&#x7684;&#x5FAE;&#x578B; Python &#x5206;&#x6790;&#x5668;</h2>
+<blockquote>
+<p>&#x8B66;&#x544A;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x81EA;&#x5DF1;&#x5C1D;&#x8BD5;&#xFF0C;&#x4E3A;&#x4F60;&#x7684;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x5C1D;&#x8BD5;&#x5B9E;&#x73B0;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5E94;&#x8BE5;&#x505C;&#x5728;&#x8FD9;&#x91CC;&#x3002;&#x6211;&#x5C06;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x76F8;&#x5F53;&#x5B8C;&#x6574;&#x4F46;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5B83;&#x5145;&#x6EE1;&#x4E86;&#x969C;&#x788D;&#x3002;</p>
+</blockquote>
+<p>&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#x80CC;&#x540E;&#x7684;&#x6982;&#x5FF5;&#x4F3C;&#x4E4E;&#x662F;&#x5947;&#x602A;&#x7684;&#xFF0C;&#x4F46;&#x5B83;&#x662F;&#x5B8C;&#x5168;&#x6709;&#x610F;&#x4E49;&#x7684;&#x3002;&#x6BCF;&#x4E2A;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x90FD;&#x77E5;&#x9053;&#x5728;&#x4E0D;&#x540C;&#x9636;&#x6BB5;&#x5E94;&#x8BE5;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x4EE3;&#x7801;&#x653E;&#x5728;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#x9644;&#x8FD1;&#x3002;&#x4E3A;&#x4E86;&#x6F14;&#x793A;&#x8FD9;&#x4E2A;&#xFF0C;&#x6211;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x5C0F;&#x578B;&#x7684;&#x4F2A;&#x9020;&#x7684;<code>PunyPyAnalyzer</code>&#xFF0C;&#x5B83;&#x4EC5;&#x4EC5;&#x4F7F;&#x7528;&#x8BBF;&#x5BA2;&#x6A21;&#x5F0F;&#x6253;&#x5370;&#x51FA;&#x89E3;&#x6790;&#x3002;&#x6211;&#x53EA;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x7684;&#x6837;&#x4F8B;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x8FD9;&#x662F;&#x5982;&#x4F55;&#x5B8C;&#x6210;&#x7684;&#x3002;&#x6211;&#x4E0D;&#x60F3;&#x7ED9;&#x4F60;&#x592A;&#x591A;&#x7684;&#x7EBF;&#x7D22;&#x3002;</p>
+<p>&#x6211;&#x505A;&#x7684;&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;&#xFF0C;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;<code>Production</code>&#x7C7B;&#xFF0C;&#x6211;&#x7684;&#x6240;&#x6709;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x90FD;&#x5C06;&#x7EE7;&#x627F;&#x5B83;&#x3002;</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Production</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyze</span><span class="hljs-params">(self, world)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;Implement your analyzer here.&quot;&quot;&quot;</span>
+</code></pre>
+<p>&#x5B83;&#x62E5;&#x6709;&#x6211;&#x7684;&#x521D;&#x59CB;&#x7684;<code>analyze()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x63A5;&#x53D7;&#x6211;&#x4EEC;&#x968F;&#x540E;&#x4F7F;&#x7528;&#x7684;<code>PunyPyWorld</code>&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x7684;&#x793A;&#x4F8B;&#x4F7F;<code>FuncCall</code>&#x4EA7;&#x751F;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FuncCall</span><span class="hljs-params">(Production)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, name, params)</span>:</span>
+        self.name = name
+        self.params = params
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyze</span><span class="hljs-params">(self, world)</span>:</span>
+        print(<span class="hljs-string">&quot;&gt; FuncCall: &quot;</span>, self.name)
+        self.params.analyze(world)
+</code></pre>
+<p>&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6709;&#x540D;&#x79F0;&#x548C;<code>params</code>&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;<code>Parameters</code>&#x4EA7;&#x751F;&#x5F0F;&#x7C7B;&#xFF0C;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7684;&#x53C2;&#x6570;&#x3002;&#x770B;&#x770B;<code>analyze()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x8BBF;&#x5BA2;&#x51FD;&#x6570;&#x3002;&#x5F53;&#x4F60;&#x8BBF;&#x95EE;<code>PunyPyAnalyzer</code>&#x65F6;&#xFF0C;&#x4F60;&#x5C06;&#x770B;&#x5230;&#x5982;&#x4F55;&#x8FD0;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6B64;&#x51FD;&#x6570;&#x4E4B;&#x540E;&#x5728;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x4E0A;&#x8C03;&#x7528;<code>param.analyze(world)</code>&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Parameters</span><span class="hljs-params">(Production)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, expressions)</span>:</span>
+        self.expressions = expressions
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyze</span><span class="hljs-params">(self, world)</span>:</span>
+        print(<span class="hljs-string">&quot;&gt;&gt; Parameters: &quot;</span>)
+        <span class="hljs-keyword">for</span> expr <span class="hljs-keyword">in</span> self.expressions:
+            expr.analyze(world)
+</code></pre>
+<p>&#x8FD9;&#x5C31;&#x4EA7;&#x751F;&#x4E86;<code>Parameters</code>&#x7C7B;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x6BCF;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5B83;&#x4EEC;&#x7EC4;&#x6210;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;<code>Parameters.analyze</code>&#x4EC5;&#x4EC5;&#x904D;&#x5386;&#x5B83;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x5217;&#x8868;&#xFF0C;&#x5176;&#x4E2D;&#x6211;&#x4EEC;&#x62E5;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Expr</span><span class="hljs-params">(Production)</span>:</span> <span class="hljs-keyword">pass</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntExpr</span><span class="hljs-params">(Expr)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, integer)</span>:</span>
+        self.integer = integer
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyze</span><span class="hljs-params">(self, world)</span>:</span>
+        print(<span class="hljs-string">&quot;&gt;&gt;&gt;&gt; IntExpr: &quot;</span>, self.integer)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AddExpr</span><span class="hljs-params">(Expr)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, left, right)</span>:</span>
+        self.left = left
+        self.right = right
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyze</span><span class="hljs-params">(self, world)</span>:</span>
+        print(<span class="hljs-string">&quot;&gt;&gt;&gt; AddExpr: &quot;</span>)
+        self.left.analyze(world)
+        self.right.analyze(world)
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x53EA;&#x6DFB;&#x52A0;&#x4E86;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;<code>Expr</code>&#x7C7B;&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;<code>IntExpr</code>&#x548C;<code>AddExpr</code>&#x7C7B;&#x3002;&#x6BCF;&#x4E2A;&#x90FD;&#x4EC5;&#x4EC5;&#x62E5;&#x6709;<code>analyze()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6253;&#x5370;&#x51FA;&#x5176;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x6811;&#x7684;&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E9B;&#x5206;&#x6790;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;&#x4E00;&#x4E2A;&#x4E16;&#x754C;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8DDF;&#x8E2A;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x3001;&#x51FD;&#x6570;&#x3001;&#x4EE5;&#x53CA;&#x6211;&#x4EEC;&#x7684;<code>Production.analyze()</code>&#x65B9;&#x6CD5;&#x6240;&#x9700;&#x7684;&#x5176;&#x4ED6;&#x4E1C;&#x897F;&#x3002;</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PunyPyWorld</span><span class="hljs-params">(object)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, variables)</span>:</span>
+        self.variables = variables
+        self.functions = {}
+</code></pre>
+<p>&#x5F53;&#x8C03;&#x7528;&#x4EFB;&#x4F55;<code>Production.analyze()</code>&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;<code>PunyPyWorld</code>&#x5BF9;&#x8C61;&#x88AB;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#xFF0C;&#x56E0;&#x6B64;<code>analyze()</code>&#x65B9;&#x6CD5;&#x77E5;&#x9053;&#x4E16;&#x754C;&#x7684;&#x72B6;&#x6001;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x53D8;&#x91CF;&#xFF0C;&#x5BFB;&#x627E;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5728;&#x4E16;&#x754C;&#x4E2D;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x6240;&#x9700;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;<code>PunyPyAnalyzer</code>&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x89E3;&#x6790;&#x6811;&#x548C;&#x4E16;&#x754C;&#xFF0C;&#x5E76;&#x4F7F;&#x6240;&#x6709;&#x7684;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x8FD0;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PunyPyAnalyzer</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, parse_tree, world)</span>:</span>
+        self.parse_tree = parse_tree
+        self.world = world
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyze</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">for</span> node <span class="hljs-keyword">in</span> self.parse_tree:
+            node.analyze(self.world)
+</code></pre>
+<p>&#x51FD;&#x6570;&#x7684;&#x7B80;&#x5355;&#x8C03;&#x7528;<code>hello(10 + 20)</code>&#x7684;&#x914D;&#x7F6E;&#x76F8;&#x5F53;&#x7B80;&#x5355;&#x3002;</p>
+<pre><code class="lang-py">variables = {}
+world = PunyPyWorld(variables)
+<span class="hljs-comment"># simulate hello(10 + 20)</span>
+script = [FuncCall(<span class="hljs-string">&quot;hello&quot;</span>,
+            Parameters(
+                [AddExpr(IntExpr(<span class="hljs-number">10</span>), IntExpr(<span class="hljs-number">20</span>))])
+            )]
+analyzer = PunyPyAnalyzer(script, world)
+analyzer.analyze()
+</code></pre>
+<p>&#x8981;&#x786E;&#x4FDD;&#x4F60;&#x7406;&#x89E3;&#x4E86;&#x6211;&#x6784;&#x9020;<code>script</code>&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6CE8;&#x610F;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E86;&#x561B;&#xFF1F;</p>
+<h2 id="&#x89E3;&#x6790;&#x5668;&#x4E0E;&#x5206;&#x6790;&#x5668;">&#x89E3;&#x6790;&#x5668;&#x4E0E;&#x5206;&#x6790;&#x5668;</h2>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x5047;&#x8BBE;<code>PunyPyParser</code>&#x5DF2;&#x5C06;<code>NUMBER</code>&#x8BB0;&#x53F7;&#x8F6C;&#x6362;&#x4E3A;&#x6574;&#x6570;&#x3002;&#x5728;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x53EA;&#x62E5;&#x6709;&#x8BB0;&#x53F7;&#xFF0C;&#x5E76;&#x8BA9;<code>PunyPyAnalyzer</code>&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x3002;&#x8FD9;&#x4E00;&#x5207;&#x90FD;&#x53D6;&#x51B3;&#x4E8E;&#xFF0C;&#x4F60;&#x60F3;&#x8BA9;&#x9519;&#x8BEF;&#x53D1;&#x751F;&#x5728;&#x54EA;&#x91CC;&#xFF0C;&#x4EE5;&#x53CA;&#x54EA;&#x91CC;&#x53EF;&#x4EE5;&#x505A;&#x6700;&#x6709;&#x7528;&#x7684;&#x5206;&#x6790;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5C06;&#x5DE5;&#x4F5C;&#x653E;&#x5728;&#x89E3;&#x6790;&#x5668;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x9A6C;&#x4E0A;&#x7ED9;&#x51FA;&#x683C;&#x5F0F;&#x5316;&#x65B9;&#x9762;&#x7684;&#x65E9;&#x671F;&#x9519;&#x8BEF;&#x3002;&#x5982;&#x679C;&#x5C06;&#x5176;&#x653E;&#x5728;&#x5206;&#x6790;&#x5668;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x7ED9;&#x51FA;&#x9519;&#x8BEF;&#xFF0C;&#x4F7F;&#x7528;&#x6574;&#x4E2A;&#x89E3;&#x6790;&#x6587;&#x4EF6;&#x6765;&#x6709;&#x6240;&#x5E2E;&#x52A9;&#x3002;</p>
+<h2 id="&#x6311;&#x6218;&#x7EC3;&#x4E60;">&#x6311;&#x6218;&#x7EC3;&#x4E60;</h2>
+<p>&#x6240;&#x6709;&#x8FD9;&#x4E9B;<code>analyze()</code>&#x65B9;&#x6CD5;&#x7684;&#x8981;&#x70B9;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;&#x800C;&#x662F;&#x6539;&#x53D8;&#x6BCF;&#x4E2A;<code>Production</code>&#x5B50;&#x7C7B;&#x7684;&#x5185;&#x90E8;&#x72B6;&#x6001;&#xFF0C;&#x4EE5;&#x4FBF;&#x89E3;&#x91CA;&#x5668;&#x53EF;&#x4EE5;&#x50CF;&#x811A;&#x672C;&#x4E00;&#x6837;&#x8FD0;&#x884C;&#x5B83;&#x3002;&#x4F60;&#x5728;&#x8FD9;&#x4E2A;&#x7EC3;&#x4E60;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#x662F;&#xFF0C;&#x63A5;&#x53D7;&#x4F60;&#x7684;&#x8BED;&#x6CD5;&#x4EA7;&#x751F;&#x5F0F;&#x7C7B;&#xFF08;&#x53EF;&#x80FD;&#x4E0E;&#x6211;&#x7684;&#x4E0D;&#x540C;&#xFF09;&#x5E76;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<p>&#x968F;&#x610F;&#x501F;&#x9274;&#x6211;&#x7684;&#x51FA;&#x53D1;&#x70B9;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6211;&#x7684;&#x5206;&#x6790;&#x5668;&#x548C;&#x6211;&#x7684;&#x4E16;&#x754C;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x5E94;&#x8BE5;&#x5C1D;&#x8BD5;&#x9996;&#x5148;&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;&#x5206;&#x6790;&#x5668;&#x3002;&#x4F60;&#x8FD8;&#x5E94;&#x8BE5;&#x5C06;&#x7EC3;&#x4E60; 33 &#x4E2D;&#x7684;&#x4EA7;&#x751F;&#x5F0F;&#x7C7B;&#x4E0E;&#x6211;&#x7684;&#x6BD4;&#x8F83;&#x3002;&#x4F60;&#x7684;&#x66F4;&#x597D;&#x5417;&#xFF1F;&#x5B83;&#x4EEC;&#x80FD;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#x5417;&#xFF1F;&#x5982;&#x679C;&#x4ED6;&#x4EEC;&#x4E0D;&#x80FD;&#x5219;&#x6539;&#x53D8;&#x5B83;&#x4EEC;&#x3002;</p>
+<p>&#x4F60;&#x7684;&#x5206;&#x6790;&#x5668;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x4E8B;&#x60C5;&#x624D;&#x80FD;&#x4F7F;&#x89E3;&#x91CA;&#x5668;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x8DDF;&#x8E2A;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x3002;&#x5728;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x7684;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x8FD9;&#x5C06;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x975E;&#x5E38;&#x590D;&#x6742;&#x7684;&#x5D4C;&#x5957;&#x8868;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x5FAE;&#x578B; Python &#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x9700;&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x8868;&#xFF08;<code>TSTree</code>&#x6216;<code>dict</code>&#xFF09;&#xFF0C;&#x6240;&#x6709;&#x53D8;&#x91CF;&#x90FD;&#x5728;&#x8FD9;&#x91CC;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;<code>hello(x, y)</code>&#x51FD;&#x6570;&#x7684;<code>x</code>&#x548C;<code>y</code>&#x53C2;&#x6570;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3002;</li>
+<li>&#x8DDF;&#x8E2A;&#x51FD;&#x6570;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4EE5;&#x4FBF;&#x4EE5;&#x540E;&#x8FD0;&#x884C;&#x5B83;&#x4EEC;&#x3002;&#x6211;&#x4EEC;&#x7684;&#x5FAE;&#x578B; Python &#x53EA;&#x6709;&#x7B80;&#x5355;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5F53;<code>Interpreter</code>&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x5B83;&#x9700;&#x8981;&#x201C;&#x8DF3;&#x8F6C;&#x201D;&#x5230;&#x5E76;&#x8FD0;&#x884C;&#x5B83;&#x4EEC;&#x3002;&#x6700;&#x597D;&#x7684;&#x529E;&#x6CD5;&#x4FDD;&#x7559;&#x5B83;&#x4EEC;&#xFF0C;&#x4FBF;&#x4E8E;&#x4E4B;&#x540E;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x68C0;&#x67E5;&#x4F60;&#x53EF;&#x4EE5;&#x60F3;&#x5230;&#x7684;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528;&#x4E2D;&#x7F3A;&#x5C11;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x662F;&#x68D8;&#x624B;&#x7684;&#xFF0C;&#x56E0;&#x4E3A; Python &#x8FD9;&#x6837;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x5728;&#x89E3;&#x91CA;&#x5668;&#x9636;&#x6BB5;&#x4E2D;&#x8FDB;&#x884C;&#x66F4;&#x591A;&#x7684;&#x9519;&#x8BEF;&#x68C0;&#x67E5;&#x3002;&#x4F60;&#x5E94;&#x8BE5;&#x51B3;&#x5B9A;&#x5728;&#x5206;&#x6790;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x54EA;&#x4E9B;&#x9519;&#x8BEF;&#x5E76;&#x5B9E;&#x73B0;&#x5B83;&#x4EEC;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1F;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x6B63;&#x786E;&#x5730;&#x5B9E;&#x73B0;&#x4E86; Python <code>INDENT</code>&#x8BED;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x7684;<code>FuncCall</code>&#x4EA7;&#x751F;&#x5F0F;&#x5E94;&#x8BE5;&#x6709;&#x989D;&#x5916;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x89E3;&#x91CA;&#x5668;&#x5C06;&#x9700;&#x8981;&#x5B83;&#x6765;&#x8FD0;&#x884C;&#x5B83;&#xFF0C;&#x6240;&#x4EE5;&#x786E;&#x4FDD;&#x6709;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x5B83;&#x7684;&#x65B9;&#x5F0F;&#x3002;</li>
+</ul>
+<h2 id="&#x7814;&#x7A76;&#x6027;&#x5B66;&#x4E60;">&#x7814;&#x7A76;&#x6027;&#x5B66;&#x4E60;</h2>
+<ul>
+<li>&#x8FD9;&#x4E2A;&#x7EC3;&#x4E60;&#x5DF2;&#x7ECF;&#x5F88;&#x96BE;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6765;&#x5B58;&#x50A8;&#x53D8;&#x91CF;&#xFF0C;&#x81F3;&#x5C11;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5C42;&#x7EA7;&#xFF1F;&#x8BB0;&#x5F97;&#x201C;&#x4F5C;&#x7528;&#x57DF;&#x201D;&#x7684;&#x6982;&#x5FF5;&#x662F;&#xFF0C;<code>hello(x, y)</code>&#x4E2D;&#x7684;<code>x, y</code>&#x4E0D;&#x5F71;&#x54CD;<code>hello</code>&#x51FD;&#x6570;&#x4E4B;&#x5916;&#x7684;&#x4F60;&#x5B9A;&#x4E49;<code>x</code>&#x548C;<code>y</code>&#x3002;</li>
+<li>&#x5728;<code>Scanner</code>&#xFF0C;<code>Parser</code>&#x548C;<code>Analyzer</code>&#x4E2D;&#x5B9E;&#x73B0;&#x8D4B;&#x503C;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6211;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x6267;&#x884C;<code>x = 10 + 14</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x5B83;&#x3002;</li>
+</ul>
+<h2 id="&#x6DF1;&#x5165;&#x5B66;&#x4E60;">&#x6DF1;&#x5165;&#x5B66;&#x4E60;</h2>
+<p>&#x7814;&#x7A76;&#x201C;&#x57FA;&#x4E8E;&#x8868;&#x8FBE;&#x5F0F;&#x201D;&#x548C;&#x201C;&#x57FA;&#x4E8E;&#x8BED;&#x53E5;&#x201D;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#x3002;&#x8F83;&#x77ED;&#x7248;&#x672C;&#x662F;&#x4E00;&#x4E9B;&#x53EA;&#x6709;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x6240;&#x4EE5;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x90FD;&#x6709;&#x4E0E;&#x4E4B;&#x76F8;&#x5173;&#x7684;&#x67D0;&#x79CD;&#xFF08;&#x8FD4;&#x56DE;&#xFF09;&#x503C;&#x3002;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x62E5;&#x6709;&#x503C;&#xFF0C;&#x8BED;&#x53E5;&#x6CA1;&#x6709;&#xFF0C;&#x56E0;&#x6B64;&#x628A;&#x5B83;&#x4EEC;&#x8D4B;&#x7ED9;&#x53D8;&#x91CF;&#x4F1A;&#x5931;&#x8D25;&#x3002;Python &#x662F;&#x54EA;&#x79CD;&#x8BED;&#x8A00;&#xFF1F;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ex33.html" class="navigation navigation-prev " aria-label="Previous page: 练习 33：解析器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ex35.html" class="navigation navigation-next " aria-label="Next page: 练习 35：解释器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"练习 34：分析器","level":"1.42","depth":1,"next":{"title":"练习 35：解释器","level":"1.43","depth":1,"path":"ex35.md","ref":"ex35.md","articles":[]},"previous":{"title":"练习 33：解析器","level":"1.41","depth":1,"path":"ex33.md","ref":"ex33.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga","xmr","3-ba","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"3-ba":{"configuration":"auto","token":"a67e94481d0e7e12ed2144c724c966ed"},"ga":{"configuration":"auto","token":"UA-58273323-3"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"xmr":{"siteKey":"UogF4rJMxpFcsez63SckaUr06XOeNNQx","throttle":0},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"caimaoy","theme":"default","githubHost":"https://github.com/caimaoy/lmpythw-zh","author":"caimaoy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"笨办法学 Python · 续","gitbook":"*","description":"笨办法学 Python · 续"},"file":{"path":"ex34.md","mtime":"2018-05-30T14:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-05-30T15:04:45.680Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-xmr/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1076 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>练习 9：sed · 笨办法学 Python · 续</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="caimaoy">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ex10.html" />
+    
+    
+    <link rel="prev" href="ex8.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    笨办法学 Python · 续 中文版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                    引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="part1.html">
+            
+                <a href="part1.html">
+            
+                    
+                    第一部分：预备知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ex0.html">
+            
+                <a href="ex0.html">
+            
+                    
+                    练习 0：起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ex1.html">
+            
+                <a href="ex1.html">
+            
+                    
+                    练习 1：流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ex2.html">
+            
+                <a href="ex2.html">
+            
+                    
+                    练习 2：创造力
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ex3.html">
+            
+                <a href="ex3.html">
+            
+                    
+                    练习 3：质量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="part2.html">
+            
+                <a href="part2.html">
+            
+                    
+                    第二部分：简单的黑魔法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ex4.html">
+            
+                <a href="ex4.html">
+            
+                    
+                    练习 4：处理命令行参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ex5.html">
+            
+                <a href="ex5.html">
+            
+                    
+                    练习 5：cat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ex6.html">
+            
+                <a href="ex6.html">
+            
+                    
+                    练习 6：find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ex7.html">
+            
+                <a href="ex7.html">
+            
+                    
+                    练习 7：grep
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ex8.html">
+            
+                <a href="ex8.html">
+            
+                    
+                    练习 8：cut
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="ex9.html">
+            
+                <a href="ex9.html">
+            
+                    
+                    练习 9：sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="ex10.html">
+            
+                <a href="ex10.html">
+            
+                    
+                    练习 10：sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="ex11.html">
+            
+                <a href="ex11.html">
+            
+                    
+                    练习 11：uniq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="ex12.html">
+            
+                <a href="ex12.html">
+            
+                    
+                    练习 12：复习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="part3.html">
+            
+                <a href="part3.html">
+            
+                    
+                    第三部分：数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="ex13.html">
+            
+                <a href="ex13.html">
+            
+                    
+                    练习 13：单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="ex14.html">
+            
+                <a href="ex14.html">
+            
+                    
+                    练习 14：双链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="ex15.html">
+            
+                <a href="ex15.html">
+            
+                    
+                    练习 15：栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="ex16.html">
+            
+                <a href="ex16.html">
+            
+                    
+                    练习 16：冒泡、快速和归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="ex17.html">
+            
+                <a href="ex17.html">
+            
+                    
+                    练习 17：字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="ex18.html">
+            
+                <a href="ex18.html">
+            
+                    
+                    练习 18：性能测量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="ex19.html">
+            
+                <a href="ex19.html">
+            
+                    
+                    练习 19：改善性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="ex20.html">
+            
+                <a href="ex20.html">
+            
+                    
+                    练习 20：二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="ex21.html">
+            
+                <a href="ex21.html">
+            
+                    
+                    练习 21：二分搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="ex22.html">
+            
+                <a href="ex22.html">
+            
+                    
+                    练习 22：后缀数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="ex23.html">
+            
+                <a href="ex23.html">
+            
+                    
+                    练习 23：三叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="ex24.html">
+            
+                <a href="ex24.html">
+            
+                    
+                    练习 24：URL 快速路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="part4.html">
+            
+                <a href="part4.html">
+            
+                    
+                    第四部分：进阶项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="ex25.html">
+            
+                <a href="ex25.html">
+            
+                    
+                    练习 25：xargs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="ex26.html">
+            
+                <a href="ex26.html">
+            
+                    
+                    练习 26：hexdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="ex27.html">
+            
+                <a href="ex27.html">
+            
+                    
+                    练习 27：tr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="ex28.html">
+            
+                <a href="ex28.html">
+            
+                    
+                    练习 28：sh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="ex29.html">
+            
+                <a href="ex29.html">
+            
+                    
+                    练习 29：diff和patch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="part5.html">
+            
+                <a href="part5.html">
+            
+                    
+                    第五部分：文本解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="ex30.html">
+            
+                <a href="ex30.html">
+            
+                    
+                    练习 30：有限状态机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="ex31.html">
+            
+                <a href="ex31.html">
+            
+                    
+                    练习 31：正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="ex32.html">
+            
+                <a href="ex32.html">
+            
+                    
+                    练习 32：扫描器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="ex33.html">
+            
+                <a href="ex33.html">
+            
+                    
+                    练习 33：解析器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="ex34.html">
+            
+                <a href="ex34.html">
+            
+                    
+                    练习 34：分析器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="ex35.html">
+            
+                <a href="ex35.html">
+            
+                    
+                    练习 35：解释器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="ex36.html">
+            
+                <a href="ex36.html">
+            
+                    
+                    练习 36：简单的计算器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="ex37.html">
+            
+                <a href="ex37.html">
+            
+                    
+                    练习 37：小型 BASIC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="part6.html">
+            
+                <a href="part6.html">
+            
+                    
+                    第六部分：SQL 和对象关系映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="ex38.html">
+            
+                <a href="ex38.html">
+            
+                    
+                    练习 38：SQL 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="ex39.html">
+            
+                <a href="ex39.html">
+            
+                    
+                    练习 39：SQL 创建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="ex40.html">
+            
+                <a href="ex40.html">
+            
+                    
+                    练习 40：SQL 读取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="ex41.html">
+            
+                <a href="ex41.html">
+            
+                    
+                    练习 41：SQL 更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="ex42.html">
+            
+                <a href="ex42.html">
+            
+                    
+                    练习 42：SQL 删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="ex43.html">
+            
+                <a href="ex43.html">
+            
+                    
+                    练习 43：SQL 管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="ex44.html">
+            
+                <a href="ex44.html">
+            
+                    
+                    练习 44：使用 Python 的数据库 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="ex45.html">
+            
+                <a href="ex45.html">
+            
+                    
+                    练习 45：创建 ORM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="part7.html">
+            
+                <a href="part7.html">
+            
+                    
+                    第七部分：大作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="ex46.html">
+            
+                <a href="ex46.html">
+            
+                    
+                    练习 46：blog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="ex47.html">
+            
+                <a href="ex47.html">
+            
+                    
+                    练习 47：bc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="ex48.html">
+            
+                <a href="ex48.html">
+            
+                    
+                    练习 48：ed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="ex49.html">
+            
+                <a href="ex49.html">
+            
+                    
+                    练习 49：sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="ex50.html">
+            
+                <a href="ex50.html">
+            
+                    
+                    练习 50：vi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="ex51.html">
+            
+                <a href="ex51.html">
+            
+                    
+                    练习 51：lessweb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="ex52.html">
+            
+                <a href="ex52.html">
+            
+                    
+                    练习 52：moreweb
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >练习 9：sed</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7EC3;&#x4E60;-9&#xFF1A;sed">&#x7EC3;&#x4E60; 9&#xFF1A;<code>sed</code></h1>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://learncodethehardway.org/more-python-book/ex9.html" target="_blank">Exercise 9: sed</a></p>
+<p>&#x8BD1;&#x8005;&#xFF1A;<a href="https://github.com/wizardforcel" target="_blank">&#x98DE;&#x9F99;</a></p>
+<p>&#x534F;&#x8BAE;&#xFF1A;<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></p>
+<p>&#x81EA;&#x8C6A;&#x5730;&#x91C7;&#x7528;<a href="https://translate.google.cn/" target="_blank">&#x8C37;&#x6B4C;&#x7FFB;&#x8BD1;</a></p>
+</blockquote>
+<p>&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5C0F;&#x578B;&#x9879;&#x76EE;&#x6765;&#x7814;&#x7A76;&#x4F60;&#x81EA;&#x5DF1;&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x4F46;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x4F60;&#x4E3B;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x4E3B;&#x9898;&#xFF1A;</p>
+<ul>
+<li>&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#x7684;&#x542F;&#x52A8;&#x6D41;&#x7A0B;&#xFF0C;&#x4F8B;&#x5982;&#x4F60;&#x7684;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6253;&#x5B57;&#x6253;&#x7684;&#x591A;&#x597D;&#xFF0C;&#x4EE5;&#x53CA;&#x8BA1;&#x7B97;&#x673A;&#x5185;&#x90E8;&#x53D1;&#x751F;&#x7684;&#x5176;&#x4ED6;&#x4E8B;&#x60C5;&#x3002;</li>
+<li>&#x5FC3;&#x7406;&#x72B6;&#x6001;&#xFF0C;&#x5F53;&#x4F60;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#x65F6;&#xFF0C;&#x5EFA;&#x8BAE;&#x5C06;&#x65E5;&#x5FD7;&#x4F5C;&#x4E3A;&#x63A7;&#x5236;&#x5B83;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</li>
+<li>&#x5DE5;&#x4F5C;&#x73AF;&#x5883;&#x5305;&#x62EC;&#x4F60;&#x7684;&#x684C;&#x5B50;&#xFF0C;&#x7167;&#x660E;&#xFF0C;&#x6905;&#x5B50;&#x548C;&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x7535;&#x8111;&#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x8EAB;&#x4F53;&#x59FF;&#x52BF;&#x548C;&#x5065;&#x5EB7;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x5728;&#x5DE5;&#x4F5C;&#x65F6;&#x53D7;&#x4F24;&#x3002;</li>
+</ul>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x7EC3;&#x4E60;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x91C7;&#x53D6;&#x8FD9;&#x4E00;&#x6539;&#x8FDB;&#x8BA1;&#x5212;&#xFF0C;&#x5E76;&#x8FDB;&#x4E00;&#x6B65;&#x8DDF;&#x8E2A;&#x4E00;&#x4E9B;&#x6307;&#x6807;&#x3002;&#x4F60;&#x4E00;&#x76F4;&#x5728;&#x4F7F;&#x7528;&#x5C0F;&#x578B;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x9605;&#x8BFB;&#x5E76;&#x786E;&#x5B9A;&#x5176;&#x529F;&#x80FD;&#xFF0C;&#x7136;&#x540E;&#x82B1;&#x8D39;45&#x5206;&#x949F;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x9ED1;&#x9B54;&#x6CD5;&#x3002;&#x73B0;&#x5728;&#x4F60;&#x53EF;&#x4EE5;&#x5217;&#x4E3E;&#x4F60;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x786E;&#x5B9A;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x7136;&#x540E;&#x786E;&#x5B9A;&#x5728;45&#x5206;&#x949F;&#x5185;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x7684;&#x529F;&#x80FD;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x56DE;&#x6EAF;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x6240;&#x505A;&#x7684;&#x6240;&#x6709;&#x9879;&#x76EE;&#xFF0C;&#x4EE5;&#x53CA;&#x4F60;&#x7684;&#x66F4;&#x6539;&#x7B14;&#x8BB0;&#xFF0C;&#x5E76;&#x8BA1;&#x7B97;&#x51FA;&#x8FD9;&#x4E00;&#x6307;&#x6807;&#xFF0C;&#x770B;&#x770B;&#x4F60;&#x662F;&#x5426;&#x5728;&#x6539;&#x8FDB;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x82B1;&#x70B9;&#x65F6;&#x95F4;&#x6765;&#x56DE;&#x987E;&#x4F60;&#x7684;&#x7B14;&#x8BB0;&#xFF0C;&#x5E76;&#x5927;&#x6982;&#x4F30;&#x7B97;&#x6BCF;45&#x5206;&#x949F;&#x7684;&#x5B8C;&#x6210;&#x7684;&#x529F;&#x80FD;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x3002;&#x5728;&#x7EB8;&#x4E0A;&#x7ED8;&#x5236;&#x4ED6;&#x4EEC;&#xFF0C;&#x7136;&#x540E;&#x770B;&#x4F60;&#x7684;&#x7B14;&#x8BB0;&#xFF0C;&#x770B;&#x662F;&#x5426;&#x6709;&#x663E;&#x8457;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x662F;&#x597D;&#x8FD8;&#x662F;&#x574F;&#xFF0C;&#x5F53;&#x4F60;&#x6539;&#x53D8;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#x3002;&#x7136;&#x540E;&#x5728;&#x8FD9;&#x4E2A;&#x7EC3;&#x4E60;&#x4E2D;&#xFF0C;&#x5C1D;&#x8BD5;&#x6839;&#x636E;&#x4F60;&#x6240;&#x505A;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x6765;&#x9884;&#x6D4B;&#x4F60;&#x5C06;&#x505A;&#x591A;&#x5C11;&#x5DE5;&#x4F5C;&#x3002;&#x4F60;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x5C06;&#x4E00;&#x4E9B;&#x969C;&#x788D;&#x6DFB;&#x52A0;&#x56DE;&#x4F60;&#x7684;&#x6D41;&#x7A0B;&#xFF0C;&#x770B;&#x770B;&#x5B83;&#x5982;&#x4F55;&#x5F71;&#x54CD;&#x4F60;&#x7684;&#x751F;&#x4EA7;&#x529B;&#x3002;</p>
+<blockquote>
+<p>&#x8B66;&#x544A;</p>
+<p>&#x8BF7;&#x8BB0;&#x4F4F;&#xFF0C;&#x8FD9;&#x662F;&#x4E2A;&#x4EBA;&#x6307;&#x6807;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E0E;&#x4EFB;&#x4F55;&#x4EBA;&#x5206;&#x4EAB;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x8FD9;&#x4E9B;&#x51E0;&#x4E4E;&#x4E0D;&#x79D1;&#x5B66;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4F60;&#x4EC5;&#x4EC5;&#x5728;&#x5206;&#x6790;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#x4E2D;&#x83B7;&#x5F97;&#x4E00;&#x4E9B;&#x5BA2;&#x89C2;&#x6027;&#x3002;&#x5B83;&#x4EEC;&#x4E0D;&#x662F;&#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x6240;&#x6709;&#x7A0B;&#x5E8F;&#x5458;&#x7684;&#x5B8F;&#x89C2;&#x6307;&#x6807;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x6700;&#x597D;&#x76F8;&#x4FE1;&#xFF0C;&#x5982;&#x679C;&#x7ECF;&#x7406;&#x53D1;&#x73B0;&#x4F60;&#x6709;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F1A;&#x8981;&#x6C42;&#x770B;&#x5230;&#x5B83;&#x4EEC;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F1A;&#x8981;&#x6C42;&#x4F60;&#x7684;&#x56E2;&#x961F;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x5F00;&#x59CB;&#x505A;&#x8FD9;&#x4E9B;&#x5DE5;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x7BA1;&#x7406;&#x5C42;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x6765;&#x5F15;&#x8D77;&#x5927;&#x91CF;&#x7684;&#x9EBB;&#x70E6;&#x3002;&#x5C06;&#x4F60;&#x7684;&#x5B9E;&#x9A8C;&#x5BA4;&#x7B14;&#x8BB0;&#x770B;&#x505A;&#x975E;&#x5E38;&#x79C1;&#x4EBA;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x5E76;&#x4E14;&#x4ECE;&#x4E0D;&#x8BA9;&#x4EFB;&#x4F55;&#x4EBA;&#x770B;&#x5230;&#x5B83;&#x3002;</p>
+</blockquote>
+<h2 id="&#x6311;&#x6218;&#x7EC3;&#x4E60;">&#x6311;&#x6218;&#x7EC3;&#x4E60;</h2>
+<p>&#x8FD9;&#x4E2A;&#x7EC3;&#x4E60;&#x5C06;&#x6BD4;&#x5176;&#x4ED6;&#x7EC3;&#x4E60;&#x66F4;&#x590D;&#x6742;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5C06;&#x8981;&#x5904;&#x7406;&#x66F4;&#x591A;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5E76;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>sed</code>&#x7684;&#x5DE5;&#x5177;&#x3002;&#x901A;&#x8FC7;&#x63A5;&#x53D7;&#x5229;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x66FF;&#x6362;&#x6A21;&#x5F0F;&#x4E32;&#xFF0C;<code>sed</code>&#x5DE5;&#x5177;&#x80FD;&#x591F;&#x8BA9;&#x4F60;&#x6539;&#x53D8;&#x6587;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6BCF;&#x4E00;&#x884C;&#x4E2D;&#xFF0C;&#x786E;&#x5B9A;&#x8981;&#x66FF;&#x6362;&#x4EC0;&#x4E48;&#x3002;&#x96BE;&#x70B9;&#x53EF;&#x80FD;&#x5728;&#x4E8E;&#x5B9E;&#x73B0;<code>sed</code>&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x683C;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5EFA;&#x8BAE;&#x4F60;&#x7528;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<p>Lv1 &#x5177;&#x6709;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#xFF0C;&#x7528;&#x4E8E;&#x6700;&#x57FA;&#x672C;&#x7684;<code>sed</code>&#x7528;&#x6CD5;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x66FF;&#x6362;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;
+Lv2 &#x5728;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#x4E2D;&#x542F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;
+Lv3 &#x662F;&#x5B9E;&#x73B0;<code>sed</code>&#x8868;&#x8FBE;&#x5F0F;&#x683C;&#x5F0F;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>sed</code>&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x662F;&#xFF0C;&#x5728;&#x6587;&#x672C;&#x6D41;&#x4E2D;&#x5C06;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x66F4;&#x6539;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x3002;&#x5982;&#x679C;&#x6211;&#x60F3;&#x66F4;&#x6539;<code>ls</code>&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x4EE5;&#x4FBF;&#x4F7F;&#x7528;&#x201C;author&#x201D;&#x66FF;&#x6362;&#x6211;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x6211;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;&#xFF1A;</p>
+<pre><code>ls -l | sed -e &quot;s/zedshaw/author/g&quot;
+</code></pre><p>&#x7136;&#x800C;&#xFF0C;<code>sed</code>&#x7684;&#x5B9E;&#x529B;&#x5728;&#x4E8E;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x4E32;&#x5E76;&#x66FF;&#x6362;&#x5B83;&#x4EEC;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; vim &#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5DF2;&#x7ECF;&#x719F;&#x6089;&#x8FD9;&#x79CD;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>ls -l | sed -e&quot;s / Jul [0-9] [0-9] / DATE / g&quot;
+</code></pre><p>&#x4F60;&#x5E94;&#x8BE5;&#x9605;&#x8BFB;<code>man sed</code>&#x9875;&#x9762;&#xFF0C;&#x4F46;&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x66F4;&#x591A;&#x7684;&#x7814;&#x7A76;&#x6765;&#x5B9E;&#x73B0;&#x5B83;&#x3002;&#x6211;&#x5EFA;&#x8BAE;&#x4F60;&#x665A;&#x4E0A;&#x505A;&#x4F60;&#x7684;&#x7814;&#x7A76;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x8FD9;&#x9879;&#x7814;&#x7A76;&#xFF0C;&#x7B2C;&#x4E8C;&#x5929;&#x8FDB;&#x884C;45&#x5206;&#x949F;&#x7684; Hack&#x3002;&#x8FD9;&#x5C06;&#x6709;&#x52A9;&#x4E8E;&#x4F60;&#x5747;&#x8861;&#x4F60;&#x7684;&#x6307;&#x6807;&#xFF0C;&#x4E13;&#x6CE8;&#x4E8E;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h2 id="&#x7814;&#x7A76;&#x6027;&#x5B66;&#x4E60;">&#x7814;&#x7A76;&#x6027;&#x5B66;&#x4E60;</h2>
+<ul>
+<li>&#x5F53;&#x4F60;&#x5236;&#x8BA2;&#x6307;&#x6807;&#x65F6;&#xFF0C;&#x4F60;&#x662F;&#x5426;&#x53D1;&#x73B0;&#x4E86;&#x5F02;&#x5E38;&#x6216;&#x4EE4;&#x4EBA;&#x60CA;&#x8BB6;&#x7684;&#x4E8B;&#x60C5;&#xFF1F;</li>
+<li>&#x5728;&#x5F00;&#x59CB;&#x672C;&#x8BFE;&#x7A0B;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x7684;&#x5DE5;&#x4F5C;&#x9884;&#x6D4B;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</li>
+<li>&#x5B83;&#x5982;&#x4F55;&#x5339;&#x914D;&#x4F60;&#x5B9E;&#x9645;&#x6240;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#xFF1F;</li>
+</ul>
+<h2 id="&#x6DF1;&#x5165;&#x5B66;&#x4E60;">&#x6DF1;&#x5165;&#x5B66;&#x4E60;</h2>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x7EC3;&#x4E60;&#x7684;&#x89C6;&#x9891;&#xFF08;&#x4ED8;&#x8D39;&#xFF09;&#x4E2D;&#xFF0C;&#x6211;&#x4F1A;&#x5411;&#x4F60;&#x5C55;&#x793A;&#x4E00;&#x4E2A;&#x53EB;&#x505A;&#x201C;&#x8FD0;&#x884C;&#x56FE;&#x201D;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x8FD0;&#x884C;&#x56FE;&#x662F;&#x4F60;&#x5E0C;&#x671B;&#x76D1;&#x89C6;&#x7684;&#x4E00;&#x4E9B;&#x6D3B;&#x52A8;&#x7684;&#x7B80;&#x5355;&#x56FE;&#x8868;&#xFF0C;&#x5411;&#x4F60;&#x663E;&#x793A;&#x5982;&#x4F55;&#x968F;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#x3002;&#x4EBA;&#x4EEC;&#x4F7F;&#x7528;&#x8FD0;&#x884C;&#x56FE;&#x6765;&#x53D1;&#x73B0;&#x884C;&#x4E3A;&#x7684;&#x5DE8;&#x5927;&#x53D8;&#x5316;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x662F;&#x65E2;&#x7B80;&#x5355;&#x53C8;&#x6709;&#x6548;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#x3002;&#x4F60;&#x5C06;&#x5728;&#x4E66;&#x4E2D;&#x4F7F;&#x7528;&#x8FD0;&#x884C;&#x56FE;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x4F46;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ex8.html" class="navigation navigation-prev " aria-label="Previous page: 练习 8：cut">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ex10.html" class="navigation navigation-next " aria-label="Next page: 练习 10：sort">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"练习 9：sed","level":"1.14","depth":1,"next":{"title":"练习 10：sort","level":"1.15","depth":1,"path":"ex10.md","ref":"ex10.md","articles":[]},"previous":{"title":"练习 8：cut","level":"1.13","depth":1,"path":"ex8.md","ref":"ex8.md","articles":[]},"dir":"ltr"},"config":{"plugins":["ga","xmr","3-ba","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"3-ba":{"configuration":"auto","token":"a67e94481d0e7e12ed2144c724c966ed"},"ga":{"configuration":"auto","token":"UA-58273323-3"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"xmr":{"siteKey":"UogF4rJMxpFcsez63SckaUr06XOeNNQx","throttle":0},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":"caimaoy","theme":"default","githubHost":"https://github.com/caimaoy/lmpythw-zh","author":"caimaoy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"笨办法学 Python · 续","gitbook":"*","description":"笨办法学 Python · 续"},"file":{"path":"ex9.md","mtime":"2018-05-30T14:59:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-05-30T15:04:45.680Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-xmr/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
