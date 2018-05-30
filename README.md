@@ -6,10 +6,10 @@
 
 自豪地采用[谷歌翻译](https://translate.google.cn/)
 
-+ [在线阅读](https://www.gitbook.com/book/wizardforcel/lmpythw/details)
-+ [PDF格式](https://www.gitbook.com/download/pdf/book/wizardforcel/lmpythw)
-+ [EPUB格式](https://www.gitbook.com/download/epub/book/wizardforcel/lmpythw)
-+ [MOBI格式](https://www.gitbook.com/download/mobi/book/wizardforcel/lmpythw)
++ [在线阅读](https://legacy.gitbook.com/read/book/caimaoy/-python-learn-more-python-3-the-hard-way)
++ [PDF格式](https://legacy.gitbook.com/download/pdf/book/caimaoy/-python-learn-more-python-3-the-hard-way)
++ [EPUB格式](https://legacy.gitbook.com/download/epub/book/caimaoy/-python-learn-more-python-3-the-hard-way)
++ [MOBI格式](https://legacy.gitbook.com/download/mobi/book/caimaoy/-python-learn-more-python-3-the-hard-way)
 + [代码仓库](https://github.com/caimaoy/lmpythw-zh)
 
 
