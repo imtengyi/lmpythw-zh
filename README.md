@@ -10,11 +10,8 @@
 + [PDF格式](https://www.gitbook.com/download/pdf/book/wizardforcel/lmpythw)
 + [EPUB格式](https://www.gitbook.com/download/epub/book/wizardforcel/lmpythw)
 + [MOBI格式](https://www.gitbook.com/download/mobi/book/wizardforcel/lmpythw)
-+ [代码仓库](http://git.oschina.net/wizardforcel/lmpythw-zh)
++ [代码仓库](https://github.com/caimaoy/lmpythw-zh)
 
-## 赞助我
-
-![](img/qr_alipay.png)
 
 ## 协议
 
